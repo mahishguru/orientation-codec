@@ -157,6 +157,10 @@ x = torch.from_numpy(x).permute(2, 0, 1)                                        
 
 ---
 
+## Training dataset
+
+The 101,000 synthetic RVEs used to train the generative models were encoded with this codec. They are published as 300 × 300 8-bit PNG orientation maps of 15 extruded-Mg alloy classes, together with the class-level orientation anchors (`class_means.json`): [Zenodo record 23036836](https://zenodo.org/records/23036836) (DOI [10.5281/zenodo.23036836](https://doi.org/10.5281/zenodo.23036836), CC BY 4.0; files available on request through Zenodo). Decode any of these images with `decode_image_pixelwise` and the bundled `data/class_means.json`.
+
 ## Bundled data
 
 | File | Content |
