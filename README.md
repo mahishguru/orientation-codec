@@ -2,7 +2,7 @@
 
 **An HCP-aware codec that turns crystallographic orientation fields into smooth RGB images, so standard image models (ViT, diffusion, flow matching) can learn and generate them. It then turns generated images back into DAMASK-ready DREAM.3D RVEs.**
 
-This is the orientation codec **Ψ** of the physics-augmented generative inverse-design framework for extruded magnesium alloys. It is described in our Acta Materialia paper (Sec. 4) and in the Co-PiLOT NeurIPS 2026 paper (Sec. 3.2, App. C).
+This is the orientation codec **Ψ** of the physics-augmented generative inverse-design framework for extruded magnesium alloys. It is described in our Acta Materialia paper (Sec. 4) and in the Co-PiLOT paper ([arXiv:2609.37875](https://arxiv.org/abs/2609.37875)) (Sec. 3.2, App. C).
 
 It is one of three companion repositories:
 
@@ -204,6 +204,21 @@ orientation_codec/
 - Crystal symmetry is applied on the **right** (`g · s`). Applying it on the left would rotate the crystal in the sample frame and scramble the texture.
 - Only single-phase **HCP** (point group 622, 12 proper rotations) is implemented. Other point groups need a new operator list in `symmetry.py`.
 - The RVEs are 2D (Z = 1). The codec neither resamples nor pads images, so any resizing is up to the data loader.
+
+## Citation
+
+If you use this code, please cite:
+
+```bibtex
+@article{guru2026copilot,
+  title   = {{Co-PiLOT}: Constrained Physics-Informed Latent Optimization for Target-Driven Inverse Design},
+  author  = {Guru, Mahish K. and Nagar, Mayank and Vyas, Ayush and Bohlen, Jan and Aydin, Roland and Ben Khalifa, Noomane},
+  journal = {arXiv preprint arXiv:2609.37875},
+  year    = {2026},
+  doi     = {10.48550/arXiv.2609.37875},
+  url     = {https://arxiv.org/abs/2609.37875}
+}
+```
 
 ## License
 
